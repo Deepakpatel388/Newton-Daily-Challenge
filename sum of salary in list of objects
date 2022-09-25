@@ -1,0 +1,44 @@
+Q.-> Given a list of employees, print the sum of salary of employee
+
+sol:->   // class Employee{
+//     String name;
+//     double salary;
+//     public Employee(String name , double salary){
+//         this.name=name;
+//         this.salary=salary;
+//     }
+// }
+
+class Solution{
+    public void sumSalary(List<Employee> list){
+        double ans = 0.0;
+        // for(int i=0; i<list.size(); i++){
+        //     ans += list.get(i).salary;
+        // }
+
+        // for(Employee x : list){
+        //     ans += x.salary;
+        // }
+
+
+        // using iterator 
+
+        // Iterator<Employee> it = list.iterator();
+
+        // while(it.hasNext()){
+        //   ans += it.next().salary;  
+        // }
+
+        // using list iterator
+
+        ListIterator<Employee> it = list.listIterator();
+
+        while(it.hasNext()){
+          ans += it.next().salary;  
+        }
+
+        
+
+        System.out.println(ans);
+    }
+}
